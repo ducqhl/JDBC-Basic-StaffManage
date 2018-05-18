@@ -16,7 +16,9 @@ public class Index {
 
     public static void main(String[] args) {
         int userCase = chooseFuntion();
-        doTask(userCase);
+        while (userCase != 0) {
+            doTask(userCase);
+        }
     }
 
     public static int chooseFuntion() {
@@ -33,7 +35,7 @@ public class Index {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         int userCase = 0;
         try {
-            System.out.println(">>> ");
+            System.out.print(">>> ");
             userCase = Integer.parseInt(in.readLine());
         } catch (Exception e) {
             System.out.println("Fail input, throws " + e);
